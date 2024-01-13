@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreDomainRequest;
 use App\Models\Domain;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,7 @@ class DomainController extends Controller
      */
     public function index()
     {
-        $domains = Domain::paginate(3);
+        $domains = Domain::orderBy('end_date')->paginate(3);
 
 
         return view('pages.dashboard', ['domains' => $domains]);
@@ -29,9 +30,13 @@ class DomainController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreDomainRequest $request)
     {
-        //
+        $data = $request->validated();
+
+        $domain = Domain::create($data);
+
+        return redirect()->route('index');
     }
 
     /**

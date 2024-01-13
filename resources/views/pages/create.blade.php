@@ -3,7 +3,7 @@
 
 
     <form action="{{ route('store') }}" method="POST" class="max-w-lg mx-auto">
-        @csrf
+       @csrf
         <div class="flex gap-5">
             <x-forms.field>
                 <x-forms.label for="name">Nazwa:</x-forms.label>
