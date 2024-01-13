@@ -8,7 +8,8 @@
     <title>Domain Manager</title>
     <script>
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
+                '(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         } else {
             document.documentElement.classList.remove('dark')
@@ -22,9 +23,16 @@
 
     <x-UI.sidebar />
 
+    <main>
 
+        <div class=" md:ml-64 ">
+            <div
+                class="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 flex justify-center items-center h-screen">
+                {{ $slot }}
 
-    {{ $slot }}
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
