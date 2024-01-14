@@ -22,12 +22,12 @@ class StoreDomainRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'=>['required'],
-            'site_url'=>['required'],
-            'host'=>['required'],
-            'host_url'=>['required'],
-            'start_date'=>['required'],
-            'end_date'=>['required'],
+            'name'=>'required|unique:domains,name',
+            'site_url'=>'nullable',
+            'host'=>'nullable',
+            'host_url'=>'nullable',
+            'start_date'=>'required|date',
+            'end_date'=>'required|date',
         ];
     }
 }
