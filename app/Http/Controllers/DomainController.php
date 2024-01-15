@@ -13,7 +13,7 @@ class DomainController extends Controller
      */
     public function index()
     {
-        $domains = Domain::orderBy('end_date')->paginate(3);
+        $domains = Domain::orderBy('end_date')->paginate(12);
 
 
         return view('pages.dashboard', ['domains' => $domains]);
@@ -44,7 +44,7 @@ class DomainController extends Controller
      */
     public function show(Domain $domain)
     {
-        //
+        return view('pages.show',['domain'=>$domain]);
     }
 
     /**

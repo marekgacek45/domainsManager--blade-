@@ -35,3 +35,4 @@ require __DIR__.'/auth.php';
 Route::get('/',[DomainController::class,'index'])->name('index');
 Route::get('/dodaj',[DomainController::class,'create'])->name('create');
 Route::post('/dodaj',[DomainController::class,'store'])->name('store');
+Route::get('/domena/{domain}',[DomainController::class,'show'])->name('show');
