@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreDomainRequest;
+use App\Http\Requests\UpdateDomainRequest;
 use App\Models\Domain;
 use Illuminate\Http\Request;
 
@@ -52,15 +53,18 @@ class DomainController extends Controller
      */
     public function edit(Domain $domain)
     {
-        //
+        return view('pages.edit',['domain'=>$domain]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Domain $domain)
+    public function update(UpdateDomainRequest $request, Domain $domain)
     {
-        //
+
+        $domain->update($request->all());
+
+        return redirect()->route('index');
     }
 
     /**

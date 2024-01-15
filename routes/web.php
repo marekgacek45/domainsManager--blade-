@@ -36,3 +36,5 @@ Route::get('/',[DomainController::class,'index'])->name('index');
 Route::get('/dodaj',[DomainController::class,'create'])->name('create');
 Route::post('/dodaj',[DomainController::class,'store'])->name('store');
 Route::get('/domena/{domain}',[DomainController::class,'show'])->name('show');
+Route::get('/edytuj/{domain}',[DomainController::class,'edit'])->name('edit');
+Route::patch('/edytuj/{domain}',[DomainController::class,'update'])->name('update');
