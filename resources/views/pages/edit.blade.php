@@ -39,6 +39,8 @@
             <x-forms.input id="start_date" name="start_date" type="date" required value="{{$domain->start_date}}"/>
         </x-forms.field>
         <x-forms.field>
+            <button type="button" id="add-one-edit">1 rok</button>
+            <button type="button" id="add-two-edit">2 lata</button>
             <x-forms.label for="end_date">Data Zakończenia:</x-forms.label>
             <x-forms.input id="end_date" name="end_date" type="date" required value="{{$domain->end_date}}"/>
         </x-forms.field>

@@ -33,7 +33,7 @@
                     <td class="px-6 py-4">
                         {{ $domain->start_date }}
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 end_date ">
                         {{ $domain->end_date }}
 
                     </td>

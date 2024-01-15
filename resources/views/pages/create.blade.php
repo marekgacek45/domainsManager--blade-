@@ -36,6 +36,9 @@
         </x-forms.field>
         <x-forms.field>
             <x-forms.label for="end_date">Data Zakończenia:</x-forms.label>
+            <button type="button" id="add-one">1 rok</button>
+            <button type="button" id="add-two">2 lata</button>
+            
             <x-forms.input id="end_date" name="end_date" type="date" required value="{{old('end_date')}}"/>
         </x-forms.field>
 
