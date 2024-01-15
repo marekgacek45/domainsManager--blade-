@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -32,10 +30,10 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-Route::get('/',[DomainController::class,'index'])->name('index')->middleware('auth');
-Route::get('/dodaj',[DomainController::class,'create'])->name('create');
-Route::post('/dodaj',[DomainController::class,'store'])->name('store');
-Route::get('/domena/{domain}',[DomainController::class,'show'])->name('show');
-Route::get('/edytuj/{domain}',[DomainController::class,'edit'])->name('edit');
-Route::patch('/edytuj/{domain}',[DomainController::class,'update'])->name('update');
-Route::delete('/usuń/{domain}',[DomainController::class,'destroy'])->name('delete');
+Route::get('/',[DomainController::class,'index'])->name('index')->middleware('admin');
+Route::get('/dodaj',[DomainController::class,'create'])->name('create')->middleware('admin');
+Route::post('/dodaj',[DomainController::class,'store'])->name('store')->middleware('admin');
+Route::get('/domena/{domain}',[DomainController::class,'show'])->name('show')->middleware('admin');
+Route::get('/edytuj/{domain}',[DomainController::class,'edit'])->name('edit')->middleware('admin');
+Route::patch('/edytuj/{domain}',[DomainController::class,'update'])->name('update')->middleware('admin');
+Route::delete('/usuń/{domain}',[DomainController::class,'destroy'])->name('delete')->middleware('admin');
