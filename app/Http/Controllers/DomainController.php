@@ -72,6 +72,8 @@ class DomainController extends Controller
      */
     public function destroy(Domain $domain)
     {
-        //
+        $domain->delete();
+
+        return redirect()->route('index');
     }
 }
