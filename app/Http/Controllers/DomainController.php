@@ -14,7 +14,7 @@ class DomainController extends Controller
      */
     public function index()
     {
-        $domains = Domain::orderBy('end_date')->paginate(12);
+        $domains = Domain::orderBy('end_date')->paginate(10);
 
 
         return view('pages.dashboard', ['domains' => $domains]);

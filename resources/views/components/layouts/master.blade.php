@@ -27,7 +27,7 @@
 
         <div class=" md:ml-64 ">
             <div
-                class="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 flex justify-center items-center h-screen">
+                class=" dark:border-gray-700 px-4 lg:px-36 pt-8  lg:pt-16 h-screen">
                 {{ $slot }}
 
             </div>

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('domains', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('site_url')->nullable();;
+            $table->string('site_url');
             $table->string('host')->nullable();
             $table->string('host_url')->nullable();
             $table->date('start_date')->nullable();

@@ -1,4 +1,7 @@
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+<h1 class="text-center text-lg font-semibold mb-6 dark:text-white">Domains Manager - życzę miłego zarządzania 😁</h1>
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg xl:w-3/4 mx-auto">
+    
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -9,10 +12,10 @@
                     Host
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Data Kupna
+                    Data Zakończenia
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Data Zakończenia
+                    Data Kupna
                 </th>
                 <th scope="col" class="px-6 py-3">
 
@@ -23,19 +26,21 @@
 
             @foreach ($domains as $domain)
                 <tr
-                    class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                    class="table-row border-b dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <a href="{{ $domain->site_url }}" target="_blank">{{ $domain->name }}</a>
+                        <a href="https://{{ $domain->site_url }}" target="_blank">{{ $domain->name }}</a>
                     </th>
                     <td class="px-6 py-4">
                         <a href="{{ $domain->host_url }}" target="_blank">{{ $domain->host }}</a>
                     </td>
+                    
+                    <td class="px-6 py-4 end_date">
+                        <span class="end_date_value">{{ $domain->end_date }}</span>
+                        <span class="days_remaining ml-3 font-semibold"></span>
+
+                    </td>
                     <td class="px-6 py-4">
                         {{ $domain->start_date }}
-                    </td>
-                    <td class="px-6 py-4 end_date ">
-                        {{ $domain->end_date }}
-
                     </td>
                     <td class="px-6 py-4 flex justify-center items-center gap-4">
                         <a href="{{ route('show', $domain->id) }}"><svg class="w-6 h-6 text-gray-800 dark:text-white"
