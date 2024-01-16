@@ -8,7 +8,7 @@
 
 
 .alert-1.table-row{
-    @apply bg-red-600 text-white dark:bg-red-600;
+    @apply bg-red-600 text-black dark:bg-red-600 dark:text-white;
 }
 
 .alert-2.table-row{

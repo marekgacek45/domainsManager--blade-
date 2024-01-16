@@ -43,16 +43,8 @@
                         {{ $domain->start_date }}
                     </td>
                     <td class="px-6 py-4 flex justify-center items-center gap-4">
-                        <a href="{{ route('show', $domain->id) }}"><svg class="w-6 h-6 text-gray-800 dark:text-white"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 20 14">
-                                <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2">
-                                    <path d="M10 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                                    <path d="M10 13c4.97 0 9-2.686 9-6s-4.03-6-9-6-9 2.686-9 6 4.03 6 9 6Z" />
-                                </g>
-                            </svg></a>
-                        <a href="{{ route('edit', $domain->id) }}"><svg class="w-6 h-6 text-gray-800 dark:text-white"
+                       
+                        <a href="{{ route('edit', $domain->id) }}"><svg class="w-5 h-5 text-gray-800 dark:text-white hover:scale-110 transition-transform"
                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                 viewBox="0 0 20 18">
                                 <path
@@ -60,11 +52,11 @@
                                 <path
                                     d="M13.243 3.2 7.359 9.081a.5.5 0 0 0-.136.256L6.51 12.9a.5.5 0 0 0 .59.59l3.566-.713a.5.5 0 0 0 .255-.136L16.8 6.757 13.243 3.2Z" />
                             </svg></a>
-                        <form action="{{ route('delete', $domain->id) }}" method="POST">
+                        <form action="{{ route('delete', $domain->id) }}" method="POST" class="mt-1">
                             @csrf
                             @method('DELETE')
                             <button type="sumbit">
-                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                <svg class="w-5 h-5 text-gray-800 dark:text-white hover:scale-110 transition-transform" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2"

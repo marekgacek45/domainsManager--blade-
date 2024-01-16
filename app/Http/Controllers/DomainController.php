@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreDomainRequest;
-use App\Http\Requests\UpdateDomainRequest;
 use App\Models\Domain;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Mail;
+use App\Http\Requests\StoreDomainRequest;
+use App\Http\Requests\UpdateDomainRequest;
 
 class DomainController extends Controller
 {
@@ -76,4 +78,6 @@ class DomainController extends Controller
 
         return redirect()->route('index');
     }
+
+    
 }

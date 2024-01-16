@@ -34,7 +34,7 @@
             </label>
         </div> --}}
 
-        <div class="flex items-center justify-end mt-4">
+        <div class="flex flex-col gap-3 sm:flex-row sm:gap-0 items-center justify-end mt-4">
             @if (Route::has('password.request'))
                 <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
                     {{ __('Zapomniałeś hasła?') }}
@@ -43,7 +43,7 @@
 
            
             <x-primary-button class="ms-3 ">
-                <a href="/register">Stwórz konto</a>
+                <a href="/register">Rejestracja</a>
             </x-primary-button>
             <x-primary-button class="ms-3">
                 {{ __('Login') }}

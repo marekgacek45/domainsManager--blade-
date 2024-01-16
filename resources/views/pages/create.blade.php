@@ -43,13 +43,13 @@
         <x-forms.field>
             <x-forms.label for="end_date">Data Zakończenia:</x-forms.label>
 
-            <x-ui.outline-button id="add-one">1 rok</x-ui.outline-button>
-            <x-ui.outline-button id="add-two">2 lata</x-ui.outline-button>
+            <x-UI.outline-button id="add-one">1 rok</x-UI.outline-button>
+            <x-UI.outline-button id="add-two">2 lata</x-UI.outline-button>
 
             <x-forms.input id="end_date" name="end_date" type="date" value="{{ old('end_date') }}" />
         </x-forms.field>
 
-        <x-ui.base-button type="submit">Dodaj</x-ui.base-button>
+        <x-UI.base-button type="submit">Dodaj</x-UI.base-button>
         <div class="mt-2">
 
             <span class="text-sm dark:text-white">*pola obowiązkowe</span>

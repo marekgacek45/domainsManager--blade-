@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-Route::get('/',[DomainController::class,'index'])->name('index')->middleware('admin');
+Route::get('/',[DomainController::class,'index'])->name('index')->middleware('auth');
 Route::get('/dodaj',[DomainController::class,'create'])->name('create')->middleware('admin');
 Route::post('/dodaj',[DomainController::class,'store'])->name('store')->middleware('admin');
 Route::get('/domena/{domain}',[DomainController::class,'show'])->name('show')->middleware('admin');
